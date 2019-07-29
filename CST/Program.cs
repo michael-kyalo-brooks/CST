@@ -8,7 +8,7 @@ namespace CST
     {
         static void Main(string[] args)
         {
-            var shoppingList = new List<string>() { string.Empty };
+            var shoppingList = new List<string>() { "Apple", "Apple", "Orange", "Apple" };
             var result = (string)null;
             try
             {
