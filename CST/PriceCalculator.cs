@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CST
@@ -7,7 +8,21 @@ namespace CST
     {
         public decimal Calculate(IEnumerable<string> list)
         {
-            return list.Count() * 0.6m;
+            return list.Select(GetPrice).Sum();
+        }
+
+        private decimal GetPrice(string item)
+        {
+            if (item.ToUpperInvariant() == "APPLE")
+            {
+                return 0.6m;
+            }
+            else if (item.ToUpperInvariant() == "ORANGE")
+            {
+                return 0.25m;
+            }
+
+            throw new ArgumentOutOfRangeException();
         }
     }
 }
