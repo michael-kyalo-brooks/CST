@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace CST
 {
     [TestFixture]
     public class PriceCalculatorTests
     {
-        public IPriceCalculator _priceCalculator;
+        public IPriceCalculator _priceCalculator = new PriceCalculator();
         
         private void DoTest(decimal targetPrice, params string[] items)
         {

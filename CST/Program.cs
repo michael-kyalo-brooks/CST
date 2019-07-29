@@ -12,7 +12,7 @@ namespace CST
             var result = (string)null;
             try
             {
-                IPriceCalculator calculator = null;
+                IPriceCalculator calculator = new PriceCalculator();
                 var price = calculator.Calculate(shoppingList);
                 result = "£" + price.ToString();
             }
