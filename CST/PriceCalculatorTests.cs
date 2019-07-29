@@ -47,6 +47,10 @@ namespace CST
         [TestCase(0.75, "Orange", "Orange", "Orange")]
         [TestCase(1, "Orange", "Orange", "Orange", "Orange")]
         [TestCase(0.85, "Apple", "Orange")]
+        [TestCase(1.45, "Apple", "Orange", "Apple")]
+        [TestCase(1.45, "Apple", "Apple", "Orange")]
+        [TestCase(2.05, "Apple", "Apple", "Orange", "Apple")]
+        [TestCase(2.3, "Orange", "Apple", "Apple", "Orange", "Apple")]
         public void VariousLists(decimal target, params string[] items)
         {
             DoTest(target, items);
