@@ -22,6 +22,8 @@ namespace CST
         [Test]
         [TestCase(0.6, "Apple")]
         [TestCase(1.2, "Apple", "Apple")]
+        [TestCase(1.8, "Apple", "Apple", "Apple")]
+        [TestCase(2.4, "Apple", "Apple", "Apple", "Apple")]
         public void VariousLists(decimal target, params string[] items)
         {
             DoTest(target, items);
