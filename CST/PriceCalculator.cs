@@ -7,12 +7,7 @@ namespace CST
     {
         public decimal Calculate(IEnumerable<string> list)
         {
-            if (list.Count() > 0)
-            {
-                return 0.6m;
-            }
-
-            return 0m;
+            return list.Count() * 0.6m;
         }
     }
 }
