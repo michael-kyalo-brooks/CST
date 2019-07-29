@@ -18,5 +18,12 @@ namespace CST
         {
             DoTest(0m);
         }
+
+        [Test]
+        [TestCase(0.6, "Apple")]
+        public void VariousLists(decimal target, params string[] items)
+        {
+            DoTest(target, items);
+        }
     }
 }
